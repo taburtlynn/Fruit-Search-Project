@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:focus {
+ /* TODO */
+}
+
+body {
+  /* TODO */
+  display: block;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to left,rgb(255, 102, 0),yellow);
+}
+
+h1 {
+
+text-align: center;
+justify-content: center;
+position: relative;
+}
+
+input {
+ background: transparent;
+  border-top: unset;  
+  border-left: unset;
+  border-right: unset;
+  /* border-bottom: red, 20px; */
+  padding: 0.5em;
+  
+ /* TODO */
+}
+
+.search-container {
+ /* TODO */
+ display: inline-block;
+ align-items: center;
+ justify-content: center;
+ position: relative;
+
+ 
+
+
+}
+.search-container input,
+.search-container .suggestions {
+  /* TODO */
+}
+.search-container input {
+ /* TODO */
+
+
+}
+.search-container .suggestions {
+   /* TODO */
+}
+
+ul {
+  /* TODO */
+
+  list-style: none;
+  padding: unset;
+  margin: unset;
+    
+}
+ul.has-suggestions {
+  /* TODO */
+  position: absolute;
+}
+ul li {
+  /* TODO */
+  border: 1px solid white;
+  border-top: unset;
+  padding: .5em;
+  
+}
+ul li:hover {
+  /* TODO */
+  background: rgb(239, 179, 179);
+
+  cursor: pointer;
+}
+
+input {
+   /* TODO */
+   width: 100%;
+   text-align:center;
+}
+
