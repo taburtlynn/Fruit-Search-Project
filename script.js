@@ -7,60 +7,61 @@ const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackb
 
 
 
-function search(){
+function search() {
 
 	let results = []; let inputVal = input.value; if (inputVal.length) { results = fruit.filter((item) => { return item.toLowerCase().includes(inputVal.toLowerCase()); }); console.log(results); } return results;
-	}
-	
-function searchHandler(e){
+}
+
+function searchHandler(e) {
 
 	let inputVal = e.target.value;
 
- if (inputVal = ""){clearSuggestions();}
+	if (inputVal = "") { clearSuggestions(); }
 
- else { 
- 
- 	let results = search();
+	else {
 
-	showSuggestions(results, inputVal);
+		let results = search();
 
-	}}
-	
-function showSuggestions(results, inputVal) {
+		showSuggestions(results);
+
+	}
+}
+
+function showSuggestions(results) {
 
 	suggestions.innerHTML = "";
-	
+
 	results.forEach(result => {
-		
+
 		let li = document.createElement("li");
 		li.textContent = result;
 		suggestions.appendChild(li);
-		});
+	});
 
 }
 
 function useSuggestion(e) {
-	
+
 	let li = e.target;
 
-if(li.click){
-	
-	input.value = li.innerHTML;
-	
-	clearSuggestions();
+	if (li.click) {
 
-	console.log("clicked");
+		input.value = li.innerHTML;
 
-}
-	
+		clearSuggestions();
+
+		console.log("clicked");
+
+	}
+
 
 	// TODO populate the search bar with the suggestion. already added to event listener below
 
-	
+
 
 }
 
-function clearSuggestions(){
+function clearSuggestions() {
 
 	suggestions.innerHTML = "";
 
